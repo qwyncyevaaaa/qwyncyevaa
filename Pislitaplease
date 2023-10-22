@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .heart {
+    display: none;
+    color: red;
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>
+</head>
+<body>
+
+<button id="crushButton">Click me!</button>
+<div id="message" class="heart"></div>
+
+<script>
+document.getElementById('crushButton').addEventListener('click', function() {
+  document.getElementById('message').textContent = 'hi crush';
+  document.getElementById('message').style.display = 'block';
+});
+</script>
+
+</body>
+</html>
